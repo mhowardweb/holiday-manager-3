@@ -1,3 +1,3 @@
-# Quasar App
+# Holiday App v3
 
-> WIP
+Re-factored for Quasar v1.x

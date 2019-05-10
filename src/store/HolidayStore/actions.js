@@ -1,13 +1,14 @@
 import { uid } from 'quasar';
 
-export function loadDataAction({ commit }) {
-  commit('loadData');
+export function onboardingStatus({ commit }, data) {
+  commit('onboarding', data);
+  this.$router.replace('home');
 }
 
 export function updateSummaryAction({ state, commit }) {
-  const { daysHol, bankHols } = state.app.settings;
+  const { daysHol, bankHols } = state.settings;
   let totals = 0;
-  state.app.holidays.forEach((holiday) => {
+  state.holidays.forEach((holiday) => {
     totals += holiday.daysBooked;
   });
   const totalDaysHol = parseInt(daysHol, 10) + parseInt(bankHols, 10);
@@ -17,7 +18,7 @@ export function updateSummaryAction({ state, commit }) {
 }
 
 export function updateHolidayAction({ state, commit }, data) {
-  const myHolidays = [...state.app.holidays];
+  const myHolidays = [...state.holidays];
   const index = myHolidays.findIndex(obj => obj.id === data.id);
   myHolidays[index] = data;
   commit('updateHoliday', myHolidays);
@@ -44,7 +45,7 @@ export function saveworkDaysAction({ state, commit }) {
   const workDays = [];
   const {
     mon, tue, wed, thu, fri, sat, sun,
-  } = state.app.settings;
+  } = state.settings;
   if (sun) {
     workDays.push(0);
   }

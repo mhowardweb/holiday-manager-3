@@ -162,7 +162,7 @@ export default {
   computed: {
     company: {
       get() {
-        return this.$store.state.HolidayStore.app.settings.company;
+        return this.$store.state.HolidayStore.settings.company;
       },
       set(value) {
         this.$store.commit('HolidayStore/updateCompany', value);
@@ -170,7 +170,7 @@ export default {
     },
     name: {
       get() {
-        return this.$store.state.HolidayStore.app.settings.name;
+        return this.$store.state.HolidayStore.settings.name;
       },
       set(value) {
         this.$store.commit('HolidayStore/updateName', value);
@@ -178,7 +178,7 @@ export default {
     },
     daysHol: {
       get() {
-        return this.$store.state.HolidayStore.app.settings.daysHol;
+        return this.$store.state.HolidayStore.settings.daysHol;
       },
       set(value) {
         this.$store.commit('HolidayStore/updateDaysHol', value);
@@ -186,7 +186,7 @@ export default {
     },
     bankHols: {
       get() {
-        return this.$store.state.HolidayStore.app.settings.bankHols;
+        return this.$store.state.HolidayStore.settings.bankHols;
       },
       set(value) {
         this.$store.commit('HolidayStore/updateBankHols', value);
@@ -194,7 +194,7 @@ export default {
     },
     yearStart: {
       get() {
-        return this.$store.state.HolidayStore.app.settings.yearStart;
+        return this.$store.state.HolidayStore.settings.yearStart;
       },
       set(value) {
         this.$store.commit('HolidayStore/updateYearStart', value);
@@ -202,7 +202,7 @@ export default {
     },
     yearEnd: {
       get() {
-        return this.$store.state.HolidayStore.app.settings.yearEnd;
+        return this.$store.state.HolidayStore.settings.yearEnd;
       },
       set(value) {
         this.$store.commit('HolidayStore/updateYearEnd', value);
@@ -210,7 +210,7 @@ export default {
     },
     mon: {
       get() {
-        return this.$store.state.HolidayStore.app.settings.mon;
+        return this.$store.state.HolidayStore.settings.mon;
       },
       set(value) {
         this.$store.commit('HolidayStore/updateMon', value);
@@ -218,7 +218,7 @@ export default {
     },
     tue: {
       get() {
-        return this.$store.state.HolidayStore.app.settings.tue;
+        return this.$store.state.HolidayStore.settings.tue;
       },
       set(value) {
         this.$store.commit('HolidayStore/updateTue', value);
@@ -226,7 +226,7 @@ export default {
     },
     wed: {
       get() {
-        return this.$store.state.HolidayStore.app.settings.wed;
+        return this.$store.state.HolidayStore.settings.wed;
       },
       set(value) {
         this.$store.commit('HolidayStore/updateWed', value);
@@ -234,7 +234,7 @@ export default {
     },
     thu: {
       get() {
-        return this.$store.state.HolidayStore.app.settings.thu;
+        return this.$store.state.HolidayStore.settings.thu;
       },
       set(value) {
         this.$store.commit('HolidayStore/updateThu', value);
@@ -242,7 +242,7 @@ export default {
     },
     fri: {
       get() {
-        return this.$store.state.HolidayStore.app.settings.fri;
+        return this.$store.state.HolidayStore.settings.fri;
       },
       set(value) {
         this.$store.commit('HolidayStore/updateFri', value);
@@ -250,7 +250,7 @@ export default {
     },
     sat: {
       get() {
-        return this.$store.state.HolidayStore.app.settings.sat;
+        return this.$store.state.HolidayStore.settings.sat;
       },
       set(value) {
         this.$store.commit('HolidayStore/updateSat', value);
@@ -258,7 +258,7 @@ export default {
     },
     sun: {
       get() {
-        return this.$store.state.HolidayStore.app.settings.sun;
+        return this.$store.state.HolidayStore.settings.sun;
       },
       set(value) {
         this.$store.commit('HolidayStore/updateSun', value);

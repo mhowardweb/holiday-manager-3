@@ -54,6 +54,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'MyLayout',
   data() {
@@ -61,8 +63,17 @@ export default {
       tab: null,
     };
   },
+  computed: {
+    ...mapGetters({
+      onBoarding: 'HolidayStore/getOnboarding',
+    }),
+  },
   created() {
-    this.$store.dispatch('HolidayStore/loadDataAction');
+    if (this.onBoarding === false) {
+      this.$router.replace('start');
+    } else {
+      this.$router.replace('home');
+    }
   },
 };
 </script>

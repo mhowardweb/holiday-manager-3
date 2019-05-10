@@ -1,10 +1,10 @@
 export function calcSummary(state) {
-  const { yearEnd } = state.app.settings || '';
-  const { name } = state.app.settings || '';
-  const { totalDaysHol } = state.app || 0;
-  const { totalDaysRemaining } = state.app || 0;
-  const { totalDaysUsed } = state.app || 0;
-  const { totalDaysBooked } = state.app || 0;
+  const { yearEnd } = state.settings || '';
+  const { name } = state.settings || '';
+  const { totalDaysHol } = state || 0;
+  const { totalDaysRemaining } = state || 0;
+  const { totalDaysUsed } = state || 0;
+  const { totalDaysBooked } = state || 0;
   return {
     totalDaysHol,
     totalDaysRemaining,
@@ -16,23 +16,24 @@ export function calcSummary(state) {
 }
 
 export function getHolidays(state) {
-  // Get holidays array and sort by holStart
-  const data = [...state.app.holidays];
-  console.log(data);
-  data.sort((a, b) => a[data.holStart] > b[data.holStart]);
-  return data;
+  return state.holidays;
 }
 
 export function getHoliday(state) {
-  return state.app.holiday;
+  return state.holiday;
 }
 
 export function getWorkDays(state) {
-  const data = state.app.workDays;
+  const data = state.workDays;
   return data;
 }
 
 export function getSettings(state) {
-  const data = state.app.settings;
+  const data = state.settings;
+  return data;
+}
+
+export function getOnboarding(state) {
+  const data = state.onboarding;
   return data;
 }

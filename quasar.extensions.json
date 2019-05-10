@@ -1,0 +1,11 @@
+{
+  "@quasar/icon-factory": {
+    "source_dev": "./src/assets/holapp.png",
+    "minify_dev": "pngquant",
+    "source_build": "./src/assets/holapp.png",
+    "minify_build": "pngquant",
+    "background_color": "#000074",
+    "theme_color": "#02aa9b",
+    "build": []
+  }
+}

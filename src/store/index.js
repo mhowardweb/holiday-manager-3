@@ -1,7 +1,13 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import VuexPersist from 'vuex-persist';
 import { date } from 'quasar';
 import HolidayStore from './HolidayStore';
+
+const vuexPersist = new VuexPersist({
+  key: 'app',
+  storage: localStorage,
+});
 
 Vue.filter('formatDate', (value) => {
   if (value) {
@@ -20,6 +26,7 @@ Vue.use(Vuex);
 
 export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
+    plugins: [vuexPersist.plugin],
     modules: {
       HolidayStore,
     },
